@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+# Except directories
+!*/
+
+# Lua files
+!*.lua
+
+# Vim files
+!*.vim
+
+# And these two
+!.gitignore
+!README.md
