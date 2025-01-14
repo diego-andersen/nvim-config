@@ -2,6 +2,9 @@
 
 local map = vim.keymap.set
 
+-- Lazy plugin manager
+map("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Lazy console" })
+
 -- Better up/down movement
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
 map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
