@@ -33,4 +33,11 @@ return {
     end,
     opts = require "plugins.config.lualine",
   },
+
+  -- Key mapping lookup
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = require "plugins.config.which-key",
+  },
 }
