@@ -27,6 +27,9 @@ opt.fillchars = {
   eob = " ",
 }
 
+-- Yank to system clipboard if local
+opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
+
 -- Indentation
 opt.tabstop = 4        -- Number of spaces a tab counts for in the file
 opt.softtabstop = 4    -- Number of spaces a tab counts for during editing
