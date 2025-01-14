@@ -1,5 +1,5 @@
 # Neovim config
-Neovim config using new Lua-based style. Can be used as remote in larger dotfile repos.
+Neovim config using new Lua-based style. Can be used as submodule in larger dotfile repos.
 
 ## Requirements
 Taken from official [lazy.nvim](https://github.com/folke/lazy.nvim) repo:
@@ -10,3 +10,9 @@ Taken from official [lazy.nvim](https://github.com/folke/lazy.nvim) repo:
 ## Installation
 1. Clone this repository into `$XDG_CONFIG_HOME/nvim`.
 2. Launch Neovim, Lazy will bootstrap itself and download all plugins.
+
+## Main features
+- [Lazy](https://github.com/folke/lazy.nvim) plugin manager
+- [Nord16](https://github.com/RRethy/base16-nvim) default colorscheme
+- [ualine](https://github.com/nvim-lualine/lualine.nvim) status line
+- [which-key](https://github.com/folke/which-key.nvim) for keymapping hints
