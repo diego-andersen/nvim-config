@@ -37,6 +37,10 @@ return {
   -- Key mapping lookup
   {
     "folke/which-key.nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      "echasnovski/mini.icons",
+    },
     event = "VeryLazy",
     opts = require "plugins.config.which-key",
   },
