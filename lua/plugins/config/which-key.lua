@@ -3,15 +3,16 @@ return {
   delay = 500,
   spec = {
     {
+      mode = { "n", "v" },
       "<leader>?",
       function()
         require("which-key").show({ global = false })
       end,
       desc = "Buffer-local mappings",
     },
-    { "<leader>b", group = "buffer" },
-    { "<leader>w", group = "window",      proxy = "<C-W>" },
-    { "<leader>t", group = "tab" },
+    { "<leader>b", group = "buffers" },
+    { "<leader>w", group = "windows",     proxy = "<C-W>" },
+    { "<leader>t", group = "tabs" },
     { "<leader>l", group = "line numbers" },
     { "g",         group = "goto" },
     { "[",         group = "previous" },
