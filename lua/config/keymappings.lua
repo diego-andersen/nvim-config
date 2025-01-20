@@ -48,6 +48,10 @@ map("n", "<leader>bn", "<cmd>enew<CR>", { desc = "New buffer" })
 map("n", "<leader>bq", "<cmd>bd<CR>", { desc = "Close buffer" })
 map("n", "<leader>bs", "<cmd>w<CR>", { desc = "Save buffer" })
 map("n", "<leader>bb", "<cmd>e #<CR>", { desc = "Switch to last buffer" })
+map("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
+map("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Next buffer" })
+map("n", "[b", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
+map("n", "]b", "<cmd>bnext<CR>", { desc = "Next buffer" })
 
 -- Tabs
 map("n", "<leader>tl", "<cmd>tablast<CR>", { desc = "Last Tab" })
