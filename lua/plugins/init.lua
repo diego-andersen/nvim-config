@@ -1,5 +1,7 @@
 -- Plugin spec for lazy.nvim plugin manager. Specifies all plugins to be (down)loaded.
 
+local telescope = require("telescope.builtin")
+
 return {
   -- Lua helper function library
   "nvim-lua/plenary.nvim",
@@ -7,9 +9,12 @@ return {
   -- Default colorscheme
   {
     "RRethy/base16-nvim",
-    lazy = false,                          -- Load this during startup
-    priority = 1000,                       -- Load this before all other plugins
+    lazy = false,    -- Load this during startup
+    priority = 1000, -- Load this before all other plugins
     config = function()
+      require("base16-colorscheme").with_config({
+        telescope = false,
+      })
       vim.cmd([[colorscheme base16-nord]]) -- Set colorscheme here
     end,
   },
@@ -42,6 +47,31 @@ return {
       "echasnovski/mini.icons",
     },
     event = "VeryLazy",
-    opts = require "plugins.config.which-key",
+    opts = require("plugins.config.which-key"),
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.8",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = require("plugins.config.telescope"),
+    keys = {
+      { "<leader>ff", telescope.find_files, desc = "Telescope: find files" },
+      { "<leader>fg", telescope.live_grep,  desc = "Telescope: live grep" },
+      { "<leader>fb", telescope.buffers,    desc = "Telescope: buffers" },
+      { "<leader>fh", telescope.help_tags,  desc = "Telescope: help tags" },
+      {
+        "<leader>f~",
+        function()
+          telescope.find_files({
+            search_dirs = { "~" },
+            cwd = "~",
+            hidden = true,
+          })
+        end,
+        desc = "Telescope: search home"
+      },
+    },
   },
 }

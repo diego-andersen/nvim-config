@@ -13,6 +13,7 @@ return {
     { "<leader>b", group = "buffers" },
     { "<leader>w", group = "windows",     proxy = "<C-W>" },
     { "<leader>t", group = "tabs" },
+    { "<leader>f", group = "find" },
     { "<leader>l", group = "line numbers" },
     { "g",         group = "goto" },
     { "[",         group = "previous" },
